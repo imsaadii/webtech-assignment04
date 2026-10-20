@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Slides</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- home screen -->
+  <div id="home" class="screen">
+    <h1>Markdown Slides</h1>
+    <p>Make presentations using a markdown file</p>
+    <div>
+      <button id="createBtn">Create Slides</button>
+      <button id="editBtn">Edit Slides</button>
+      <button id="presentBtn">Present Slides</button>
+    </div>
+    <p id="info"></p>
+  </div>
+
+  <!-- create / edit screen -->
+  <div id="editor" class="screen hidden">
+    <div class="topbar">
+      <button id="backBtn">Back</button>
+      <b>Edit Slides</b>
+      <button id="saveBtn">Save (Ctrl+S)</button>
+      <span id="msg"></span>
+    </div>
+
+    <div class="main">
+      <!-- left side: markdown code -->
+      <textarea id="mdText" spellcheck="false"></textarea>
+
+      <!-- right side: live preview -->
+      <div id="previewBox">
+        <div id="previewSlide" class="slide"></div>
+        <div class="controls">
+          <button id="prevBtn">&larr; Left</button>
+          <button id="fsBtn" class="fsBtn">Full Screen</button>
+          <button id="nextBtn">Right &rarr;</button>
+        </div>
+        <div id="count" class="count"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- presentation screen -->
+  <div id="presenter" class="screen hidden">
+    <div id="pSlide" class="slide big"></div>
+    <div class="controls">
+      <button id="pExit">Close</button>
+      <button id="pPrev">&larr; Left</button>
+      <button id="pFs" class="fsBtn">Full Screen</button>
+      <button id="pNext">Right &rarr;</button>
+    </div>
+    <div id="pCount" class="count"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
